@@ -55,7 +55,7 @@ export default class Timer extends React.Component {
 
   render() {
     return (
-      <View style={{flex: 1}}>
+      <View style={styles.timerView}>
         <View style={styles.timer}>
           <Text style={{textAlign: 'center'}}>{this.state.hoursLeft < 10 ? `0${this.state.hoursLeft}` : this.state.hoursLeft}:</Text>
           <Text style={{textAlign: 'center'}}>{this.state.minutesLeft < 10 ? `0${this.state.minutesLeft}` : this.state.minutesLeft}:</Text>
@@ -81,7 +81,13 @@ export default class Timer extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  timerView: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
   timer: {
+    alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
   },

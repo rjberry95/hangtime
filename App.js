@@ -1,15 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Button } from 'react-native';
 import Part from './components/parts';
 import Timer from './components/timer';
+import { TabNavigator } from 'react-navigation';
+import Workouts from './pages/workouts'
+import Current from './pages/current';
 
 
 export default class App extends React.Component {
-
-  componentWillMount() {
-    let data = require('./data.json');
-    this.setState({workout: data});
-  }
 
   constructor(props) {
     super(props);
@@ -17,34 +15,26 @@ export default class App extends React.Component {
   }
 
   render() {
-    return (
-      <View style={styles.container}>
-      <Text style={styles.title}>{this.state.workout.key}</Text>
-        <FlatList 
-          data={this.state.workout.parts}
-          renderItem={({item}) =>
-            <Part part={item}/>
-          }/>
-        {<Timer seconds="12" minutes="0" hours="1"/>}
-      </View>
-    );
+    return <Nav/>;
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: '20%',
+const Nav = TabNavigator(
+  {
+    CurrentWorkout: {
+      screen: Current,
+      navigationOptions: {
+        tabBarLabel: 'Current Workout'
+      }
+    },
+    AllWorkouts : {
+      screen: Workouts,
+      navigationOptions: {
+        tabBarLabel: 'All Workouts'
+      }
+    }
   },
-  title: {
-    fontSize: 26,
-  },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
+  {
+    tabBarPosition: 'bottom'
   }
-});
+)
