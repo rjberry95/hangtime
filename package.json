@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-plugin-react": "^7.4.0",
     "jest-expo": "^21.0.2",
+    "lint-staged": "^4.3.0",
+    "pre-commit": "^1.2.2",
     "react-native-scripts": "1.5.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
@@ -24,5 +28,9 @@
     "react-native": "^0.48.4",
     "react-navigation": "^1.0.0-beta.15",
     "react-timer-mixin": "^0.13.3"
-  }
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "pre-commit": "lint-staged"
 }
