@@ -1,0 +1,89 @@
+
+    {
+      "key": "Climbing Workout",
+      "parts": [
+        {
+          "key": "warm up stretch",
+          "exercises": [
+            {
+              "key": "Walking Leg Raise",
+              "sets": 1,
+              "reps": 10,
+              "hasDuration": false,
+              "exerciseRest": 10,
+              "restUnit": "s"
+            },
+            {
+              "key": "Walking Knee Bend",
+              "sets": 1,
+              "reps": 10,
+              "hasDuration": false,
+              "exerciseRest": 10,
+              "restUnit": "s"
+            },
+            {
+              "key": "Hip Circles",
+              "sets": 1,
+              "reps": 10,
+              "hasDuration": false,
+              "exerciseRest": 10,
+              "restUnit": "s"
+            }
+          ],
+          "partRest": 3,
+          "restUnit": "m"
+        },
+        {
+          "key": "warm up",
+          "exercises": [
+            {
+              "key": "Jug Hang",
+              "sets": 3,
+              "reps": 1,
+              "hasDuration": true,
+              "duration": 12,
+              "durationUnit": "s",
+              "exerciseRest": 10,
+              "restUnit": "s"
+            },
+            {
+              "key": "4 Finger Hang",
+              "sets": 3,
+              "reps": 1,
+              "hasDuration": true,
+              "duration": 10,
+              "durationUnit": "s",
+              "exerciseRest": 10,
+              "restUnit": "s"
+            },
+            {
+              "key": "Push Ups",
+              "sets": 3,
+              "reps": 10,
+              "hasDuration": false,
+              "exerciseRest": 10,
+              "restUnit": "s"
+            }
+          ],
+          "partRest": 3,
+          "restUnit": "m"
+        },
+        {
+          "key": "climb",
+          "exercises": [
+            {
+              "key": "Boulder",
+              "sets": 1,
+              "reps": 1,
+              "hasDuration": true,
+              "duration": 1.5,
+              "durationUnit": "h",
+              "exerciseRest": 10,
+              "restUnit": "s"
+            }
+          ],
+          "partRest": 5,
+          "restUnit": "m"
+        }
+      ]
+    }
