@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import { TabNavigator } from 'react-navigation';
-import Part from 'hangtime/components/parts'
+import Part from 'hangtime/components/parts';
 
 export default class Workouts extends React.Component {
   componentWillMount() {
@@ -11,13 +11,13 @@ export default class Workouts extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {realm: null};
   }
 
   render() {
     return(
       <View style={styles.container}>
-      <Text style={styles.title}>{this.state.workout.key}</Text>
+        <Text style={styles.title}>{this.state.workout.key}</Text>
         <FlatList 
           data={this.state.workout.parts}
           renderItem={({item}) =>
@@ -27,6 +27,8 @@ export default class Workouts extends React.Component {
     );
   }
 }
+
+// const Realm = require('realm');
 
 const styles = StyleSheet.create({
   container: {

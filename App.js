@@ -1,10 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, Button } from 'react-native';
-import Part from './components/parts';
-import Timer from './components/timer';
 import { TabNavigator } from 'react-navigation';
-import Workouts from './pages/workouts'
+import Workouts from './pages/workouts';
 import Current from './pages/current';
+import New from './pages/new';
 
 
 export default class App extends React.Component {
@@ -12,7 +10,6 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    console.log('TESTING LINT');
   }
 
   render() {
@@ -33,9 +30,15 @@ const Nav = TabNavigator(
       navigationOptions: {
         tabBarLabel: 'All Workouts'
       }
+    },
+    NewWorkout: {
+      screen: New,
+      navigationOptions: {
+        tabBarLabel: 'Add New'
+      }
     }
   },
   {
     tabBarPosition: 'bottom'
   }
-)
+);

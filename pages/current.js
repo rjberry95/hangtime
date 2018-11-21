@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList, Button } from 'react-native';
-import Timer from 'hangtime/components/timer';
+import Timer from 'hangtime/components/timer'; 
 
 
 export default class Current extends React.Component {
